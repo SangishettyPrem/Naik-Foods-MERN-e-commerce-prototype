@@ -4,8 +4,9 @@
 
 [[redirects]]
   from = "/api/*"
-  to = "https://naikfoods-api.onrender.com/api/:splat"
+  to = "https://naik-foods-mern-e-commerce-prototype.onrender.com/api/:splat"
   status = 200
+  force = true
 
 [[redirects]]
   from = "/*"

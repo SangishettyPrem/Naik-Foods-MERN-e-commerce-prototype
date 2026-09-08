@@ -1,6 +1,10 @@
 # Naik Foods E-Commerce Evolution Prototype
 
 > **Full Stack MERN Prototype** demonstrating targeted product discovery, regional provenance, frictionless variant selection, and cart conversion improvements for **Naik Foods** (`naikfoods.co.in/in`), developed as part of the **Bits And Volts Private Limited** technical assessment.
+>
+> - **Live Frontend App**: [https://naikfoodsassessment.netlify.app](https://naikfoodsassessment.netlify.app)
+> - **Live Backend API**: [https://naik-foods-mern-e-commerce-prototype.onrender.com](https://naik-foods-mern-e-commerce-prototype.onrender.com)
+> - **Git Repository**: [https://github.com/SangishettyPrem/Naik-Foods-MERN-e-commerce-prototype](https://github.com/SangishettyPrem/Naik-Foods-MERN-e-commerce-prototype)
 
 ---
 
@@ -17,8 +21,9 @@ This project is **not a clone** of the legacy site. Instead, it is an **independ
 A thorough audit of the live website (`https://www.naikfoods.co.in/in`) was performed across customer journeys, page performance, and technical architecture.
 
 ### Observed Issues on Live Website:
+
 1. **Aggressive Route-Blocking Loaders & Spinners**:
-   - Every route change triggers a full-screen blocking splash spinner (*"Getting things fresh for you..."*) accompanied by layout shifts and MUI circular progress indicators, causing perceived lag and high bounce risk.
+   - Every route change triggers a full-screen blocking splash spinner (_"Getting things fresh for you..."_) accompanied by layout shifts and MUI circular progress indicators, causing perceived lag and high bounce risk.
 2. **Siloed Navigation & Missing Regional/Dietary Discovery**:
    - Despite Naik Foods' unique selling proposition being authentic regional provenance (Vidarbha, Konkan, Pune), the store lacks direct filtering by region.
    - Shoppers cannot filter by essential Indian dietary preferences (Jain-Friendly/No Onion-Garlic, Vegan, Millet-Based, Zero Maida) or Spice Level (Mild, Medium, Kolhapuri Teekha).
@@ -26,7 +31,7 @@ A thorough audit of the live website (`https://www.naikfoods.co.in/in`) was perf
    - Product cards on catalog grids do not display pack sizes/weights (e.g. 100g, 180g, 200g, 500g) and offer no quick-add button. Users are forced to navigate into the PDP, wait for page hydration, select variants, and navigate back.
 4. **Underutilized Cart Experience**:
    - The cart page is completely disconnected and static. An empty cart presents only a plain text link with zero product recommendations or impulse-buy cross-sells.
-   - The homepage highlights *"Free Delivery - Minimum order ₹999"*, yet the cart lacks a dynamic progress meter showing how much more is required to unlock free shipping.
+   - The homepage highlights _"Free Delivery - Minimum order ₹999"_, yet the cart lacks a dynamic progress meter showing how much more is required to unlock free shipping.
 5. **No Instant Delivery Confidence**:
    - Delivery availability and ETA are hidden until deep checkout steps, creating purchase hesitation for regional perishable/fresh items.
 
@@ -74,6 +79,7 @@ We engineered a **production-ready MERN stack prototype** focused on speed, sens
 ## 5. Tech Stack
 
 ### Frontend:
+
 - **React 18** (Functional components, hooks, custom contexts)
 - **Vite 5** (Ultra-fast build and HMR)
 - **Tailwind CSS 3** (Custom Naik Foods brand design system)
@@ -82,6 +88,7 @@ We engineered a **production-ready MERN stack prototype** focused on speed, sens
 - **Lucide React** (Modern clean iconography)
 
 ### Backend:
+
 - **Node.js 20+**
 - **Express.js 4** (RESTful API architecture)
 - **Mongoose 8** (Schema modeling, validation, compound text indexes)
@@ -89,6 +96,7 @@ We engineered a **production-ready MERN stack prototype** focused on speed, sens
 - **Dotenv** (Environment isolation)
 
 ### Database:
+
 - **MongoDB** (Local instance / MongoDB Atlas compatible)
 
 ---
@@ -171,20 +179,21 @@ Assessment/
 
 Create `.env` files in `server/` (or root) based on `.env.example`:
 
-| Variable | Description | Default Local Value |
-|---|---|---|
-| `PORT` | Backend server port | `5000` |
-| `NODE_ENV` | Runtime environment | `development` |
-| `CLIENT_URL` | Frontend origin for CORS | `http://localhost:5173` |
-| `MONGODB_URI` | MongoDB connection string | `mongodb://127.0.0.1:27017/naikfoods` |
-| `FREE_DELIVERY_THRESHOLD` | Threshold for Free Delivery in INR | `999` |
-| `STANDARD_SHIPPING_FEE` | Default shipping fee in INR | `79` |
+| Variable                  | Description                        | Default Local Value                   |
+| ------------------------- | ---------------------------------- | ------------------------------------- |
+| `PORT`                    | Backend server port                | `5000`                                |
+| `NODE_ENV`                | Runtime environment                | `development`                         |
+| `CLIENT_URL`              | Frontend origin for CORS           | `http://localhost:5173`               |
+| `MONGODB_URI`             | MongoDB connection string          | `mongodb://127.0.0.1:27017/naikfoods` |
+| `FREE_DELIVERY_THRESHOLD` | Threshold for Free Delivery in INR | `999`                                 |
+| `STANDARD_SHIPPING_FEE`   | Default shipping fee in INR        | `79`                                  |
 
 ---
 
 ## 9. Installation & Running Locally
 
 ### Prerequisites
+
 - **Node.js**: v18 or higher (v20+ recommended)
 - **MongoDB**: Local MongoDB instance running on port `27017` or MongoDB Atlas URI.
 
@@ -204,7 +213,8 @@ npm run seed
 npm run dev
 # (or: node server.js)
 ```
-*Backend will be active at `http://localhost:5000`.*
+
+_Backend will be active at `http://localhost:5000`._
 
 ### Step 2: Install & Start Frontend
 
@@ -218,7 +228,8 @@ npm install
 # Start Vite dev server
 npm run dev
 ```
-*Frontend will be active at `http://localhost:5173`.*
+
+_Frontend will be active at `http://localhost:5173`._
 
 ---
 
@@ -265,7 +276,7 @@ npm run dev
 
 - **`POST /api/pincode/check`**
   - Body: `{ pincode: "411002" }`
-  - Returns city, delivery ETA (e.g., *24-48 Hours*), courier partner, and COD status.
+  - Returns city, delivery ETA (e.g., _24-48 Hours_), courier partner, and COD status.
 
 ### 4. Express Checkout
 
@@ -291,6 +302,7 @@ npm run dev
 ## 12. Deployment Preparation
 
 ### Frontend (Vercel / Netlify)
+
 - Root Directory: `client`
 - Build Command: `npm run build`
 - Output Directory: `dist`
@@ -298,6 +310,7 @@ npm run dev
   - `VITE_API_URL`: Your deployed backend URL (e.g. `https://naikfoods-api.onrender.com`)
 
 ### Backend (Render / Railway / Heroku)
+
 - Root Directory: `server`
 - Start Command: `node server.js`
 - Environment Variables:

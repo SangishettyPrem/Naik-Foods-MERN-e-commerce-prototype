@@ -3,7 +3,9 @@
 **Candidate Submission**: Full Stack MERN Intern Assessment  
 **Company**: Bits And Volts Private Limited  
 **Target Live Website Studied**: [https://www.naikfoods.co.in/in](https://www.naikfoods.co.in/in)  
-**Project Repository**: `SangishettyPrem/quickchat-realtime` / `Resume_Projects/Assessment`  
+**Live Frontend Deployment**: [https://naikfoodsassessment.netlify.app](https://naikfoodsassessment.netlify.app)  
+**Live Backend API**: [https://naik-foods-mern-e-commerce-prototype.onrender.com](https://naik-foods-mern-e-commerce-prototype.onrender.com)  
+**Git Repository**: [https://github.com/SangishettyPrem/Naik-Foods-MERN-e-commerce-prototype](https://github.com/SangishettyPrem/Naik-Foods-MERN-e-commerce-prototype)  
 **Working Prototype**: MERN Stack Application (React 18 + Vite + Tailwind CSS + Node.js + Express + MongoDB)
 
 ---
