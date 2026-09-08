@@ -1,0 +1,22 @@
+{
+  "name": "naik-foods-ecommerce-prototype",
+  "version": "1.0.0",
+  "description": "Naik Foods E-Commerce Evolution Prototype - Bits and Volts Assessment",
+  "scripts": {
+    "install:all": "npm --prefix server install && npm --prefix client install",
+    "seed": "npm --prefix server run seed",
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build"
+  },
+  "keywords": [
+    "mern",
+    "ecommerce",
+    "naikfoods",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "Full Stack MERN Developer",
+  "license": "ISC"
+}
